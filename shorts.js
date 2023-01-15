@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ttttttttttttt', localStorage);
+console.log('eeeeee', localStorage);
 chrome.storage.sync.get().then((result) => {
     console.log(2)
 
