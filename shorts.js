@@ -28,50 +28,36 @@ console.log(1)
 
 console.log('yyyyyyyyyyyy', localStorage);
 
-chrome.storage.sync.get().then((result) => {
-    console.log(2)
 
-    let size = Object.keys(result).length;
-
-    let idsObj = {}
-
-    if (size === 0) {
-        // idsObj['0'] = embeddedUrlId;
-    } else {
-        // idsObj[Number(Object.keys(result)[size - 1]) + 1] = embeddedUrlId;
-    }
+for (var id in localStorage) {
 
 
-    for (var id in localStorage) {
+    // for (const id in result) {
+    console.log('asd', localStorage.getItem(localStorage.id))
+
+    var one = document.createElement("div");
+    one.className = "col-lg-2";
+    one.style.margin = "15px";
+
+    var two = document.createElement("div");
+    two.className = "card";
+
+    var three = document.createElement("iframe");
+    three.width = "225";
+    three.height = "400";
+    three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
+    three.style.borderRadius = "10px";
+    three.frame
+    three.allowFullscreen = "allowfullscreen";
 
 
-        // for (const id in result) {
-        console.log('asd', localStorage.getItem(localStorage.id))
+    one.appendChild(two);
+    two.appendChild(three);
 
-        var one = document.createElement("div");
-        one.className = "col-lg-2";
-        one.style.margin = "15px";
+    console.log('one', one)
 
-        var two = document.createElement("div");
-        two.className = "card";
-
-        var three = document.createElement("iframe");
-        three.width = "225";
-        three.height = "400";
-        three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
-        three.style.borderRadius = "10px";
-        three.frame
-        three.allowFullscreen = "allowfullscreen";
-
-
-        one.appendChild(two);
-        two.appendChild(three);
-
-        console.log('one', one)
-
-        document.getElementById("tit").appendChild(one);
-    }
-});
+    document.getElementById("tit").appendChild(one);
+}
 
 // for (var i in tit) {
 
