@@ -64,7 +64,7 @@ chrome.storage.sync.get().then((result) => {
             var three = document.createElement("iframe");
             three.width = "225";
             three.height = "400";
-            three.src = `https://www.youtube.com/embed/${localStorage[id]}`;
+            three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
             three.style.borderRadius = "10px";
             three.frame
             three.allowFullscreen = "allowfullscreen";
