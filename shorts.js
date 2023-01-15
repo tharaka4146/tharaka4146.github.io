@@ -26,10 +26,10 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ggggggggg', localStorage);
+console.log('uuuuuuuu', localStorage);
 
 
-for (var i = 0, len = localStorage.length - 3; i < len; ++i) {
+for (var i = 0, len = localStorage.length; i < len; ++i) {
     // console.log( localStorage.getItem( localStorage.key( i ) ) );
     //   }
 
