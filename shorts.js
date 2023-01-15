@@ -26,7 +26,8 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('eeeeee', localStorage);
+console.log('yyyyyyyyyyyy', localStorage);
+
 chrome.storage.sync.get().then((result) => {
     console.log(2)
 
@@ -41,44 +42,35 @@ chrome.storage.sync.get().then((result) => {
     }
 
 
+    for (var id in localStorage) {
 
 
-    chrome.storage.sync.get().then((result) => {
-        console.log(3)
+        // for (const id in result) {
+        console.log('asd', localStorage.getItem(localStorage.id))
 
-        console.log('result', result)
+        var one = document.createElement("div");
+        one.className = "col-lg-2";
+        one.style.margin = "15px";
 
-        for (var id in localStorage) {
+        var two = document.createElement("div");
+        two.className = "card";
 
-
-            // for (const id in result) {
-            console.log(localStorage[id])
-
-            var one = document.createElement("div");
-            one.className = "col-lg-2";
-            one.style.margin = "15px";
-
-            var two = document.createElement("div");
-            two.className = "card";
-
-            var three = document.createElement("iframe");
-            three.width = "225";
-            three.height = "400";
-            three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
-            three.style.borderRadius = "10px";
-            three.frame
-            three.allowFullscreen = "allowfullscreen";
+        var three = document.createElement("iframe");
+        three.width = "225";
+        three.height = "400";
+        three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
+        three.style.borderRadius = "10px";
+        three.frame
+        three.allowFullscreen = "allowfullscreen";
 
 
-            one.appendChild(two);
-            two.appendChild(three);
+        one.appendChild(two);
+        two.appendChild(three);
 
-            console.log('one', one)
+        console.log('one', one)
 
-            document.getElementById("tit").appendChild(one);
-        }
-    });
-
+        document.getElementById("tit").appendChild(one);
+    }
 });
 
 // for (var i in tit) {
