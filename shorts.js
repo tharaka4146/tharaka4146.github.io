@@ -18,10 +18,11 @@
         <iframe width="225" height="400" src="https://www.youtube.com/embed/XUTzp0RHEJs"
             style="border-radius: 10px;" frameborder="0" allowfullscreen>
         </iframe>
-    </div>
+        </div>
 </div> */}
 
 console.log(1)
+console.log('ttttttttttttt', localStorage.getItem("asssssd"));
 chrome.storage.sync.get().then((result) => {
     console.log(2)
 
@@ -35,7 +36,6 @@ chrome.storage.sync.get().then((result) => {
         // idsObj[Number(Object.keys(result)[size - 1]) + 1] = embeddedUrlId;
     }
 
-    console.log('ttttttttttttt', localStorage.getItem("asssssd"));
 
 
 
