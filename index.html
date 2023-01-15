@@ -15,7 +15,8 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <script type="module" src="shorts.js"></script>
+    <!-- <script src="data.js"></script> -->
+
 
     <!-- <link rel="stylesheet" href="css/style.css"> -->
 
@@ -160,6 +161,7 @@
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="tit">
 
+
                     <!-- <div class="col-lg-2" style="margin: 15px;">
                         <div class="card" id="button-3">
                             <iframe width="225" height="400" src="https://www.youtube.com/embed/XUTzp0RHEJs"
@@ -210,3 +212,48 @@
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src='jquery.min.js'></script>
     <!-- <script src="indexAnimation.js"></script> -->
+
+
+    <script>
+        console.log('qwe')
+        // console.log('datas', datas)
+        console.log('rty')
+
+        let result = {
+            "1": "HZ5NYDQ-y6g",
+            "2": "cs20IvWuJmk",
+            "3": "mEclo6FoucU",
+        }
+
+        for (const id in result) {
+            // console.log(result[id])
+
+            var one = document.createElement("div");
+            one.className = "col-lg-2";
+            one.style.margin = "15px";
+
+            var two = document.createElement("div");
+            two.className = "card";
+
+            var three = document.createElement("iframe");
+            three.width = "225";
+            three.height = "400";
+            three.src = `https://www.youtube.com/embed/${result[id]}`;
+            three.style.borderRadius = "10px";
+            three.frame
+            three.allowFullscreen = "allowfullscreen";
+
+            var temp = document.createElement("p");
+            temp.className = "col-lg-2";
+            temp.style.margin = "15px";
+            temp.innerHTML = "asd";
+
+
+            one.appendChild(two);
+            two.appendChild(three);
+
+            console.log('temp', temp)
+
+            document.getElementById("tit").appendChild(one);
+        }
+    </script>
