@@ -21,8 +21,10 @@
     </div>
 </div> */}
 
-
+console.log(1)
 chrome.storage.sync.get().then((result) => {
+console.log(2)
+
     let size = Object.keys(result).length;
 
     let idsObj = {}
@@ -35,6 +37,8 @@ chrome.storage.sync.get().then((result) => {
 
 
     chrome.storage.sync.get().then((result) => {
+console.log(3)
+
         console.log('result', result)
         for (const id in result) {
             console.log(result[id])
