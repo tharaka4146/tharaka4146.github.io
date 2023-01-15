@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('bbbbbbb', localStorage);
+console.log('vvvs', localStorage);
 
 
 for (var id in localStorage) {
@@ -34,7 +34,7 @@ for (var id in localStorage) {
 
     // for (const id in result) {
     console.log('id', id)
-    console.log('ttt', localStorage.getItem(localStorage[id]))
+    console.log('ttt', localStorage.getItem(id))
     // console.log('asd', localStorage.getItem(localStorage.id))
 
     var one = document.createElement("div");
@@ -47,7 +47,7 @@ for (var id in localStorage) {
     var three = document.createElement("iframe");
     three.width = "225";
     three.height = "400";
-    three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.id)}`;
+    three.src = `https://www.youtube.com/embed/${localStorage.getItem(id)}`;
     three.style.borderRadius = "10px";
     three.frame
     three.allowFullscreen = "allowfullscreen";
