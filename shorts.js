@@ -23,7 +23,7 @@
 
 console.log(1)
 chrome.storage.sync.get().then((result) => {
-console.log(2)
+    console.log(2)
 
     let size = Object.keys(result).length;
 
@@ -35,9 +35,12 @@ console.log(2)
         // idsObj[Number(Object.keys(result)[size - 1]) + 1] = embeddedUrlId;
     }
 
+    console.log('ttttttttttttt', localStorage.getItem("asssssd"));
+
+
 
     chrome.storage.sync.get().then((result) => {
-console.log(3)
+        console.log(3)
 
         console.log('result', result)
         for (const id in result) {
