@@ -22,7 +22,7 @@
 </div> */}
 
 console.log(1)
-console.log('ttttttttttttt', localStorage.getItem("asssssd"));
+console.log('ttttttttttttt', localStorage.getItem());
 chrome.storage.sync.get().then((result) => {
     console.log(2)
 
