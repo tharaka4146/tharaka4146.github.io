@@ -26,41 +26,46 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('uuuuuuuu', localStorage);
+console.log('oooooooo', localStorage);
 
 
-for (var i = 0, len = localStorage.length; i < len; ++i) {
-    // console.log( localStorage.getItem( localStorage.key( i ) ) );
-    //   }
+// for (var i = 0, len = localStorage.length; i < len; ++i) {
 
-    // for (var id in localStorage) {
+for (let i = localStorage.length - 1; i > -1; i--) {
+    // const element = array[index];
 
+// }
+console.log(localStorage.getItem(localStorage.key(i)));
+//   }
 
-    // for (const id in result) {
-    console.log('id', localStorage.getItem(localStorage.key(i)))
-    // console.log('ttt', localStorage.getItem(id))
-    // console.log('asd', localStorage.getItem(localStorage.id))
-
-    var one = document.createElement("div");
-    one.className = "col-lg-2";
-    one.style.margin = "15px";
-
-    var two = document.createElement("div");
-    two.className = "card";
-
-    var three = document.createElement("iframe");
-    three.width = "225";
-    three.height = "400";
-    three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.key(i))}`;
-    three.style.borderRadius = "10px";
-    three.frame
-    three.allowFullscreen = "allowfullscreen";
+// for (var id in localStorage) {
 
 
-    one.appendChild(two);
-    two.appendChild(three);
+// for (const id in result) {
+console.log('id', localStorage.getItem(localStorage.key(i)))
+// console.log('ttt', localStorage.getItem(id))
+// console.log('asd', localStorage.getItem(localStorage.id))
 
-    document.getElementById("tit").appendChild(one);
+var one = document.createElement("div");
+one.className = "col-lg-2";
+one.style.margin = "15px";
+
+var two = document.createElement("div");
+two.className = "card";
+
+var three = document.createElement("iframe");
+three.width = "225";
+three.height = "400";
+three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.key(i))}`;
+three.style.borderRadius = "10px";
+three.frame
+three.allowFullscreen = "allowfullscreen";
+
+
+one.appendChild(two);
+two.appendChild(three);
+
+document.getElementById("tit").appendChild(one);
 }
 
 // for (var i in tit) {
