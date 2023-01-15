@@ -26,14 +26,16 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('yyyyyyyyyyyy', localStorage);
+console.log('bbbbbbb', localStorage);
 
 
 for (var id in localStorage) {
 
 
     // for (const id in result) {
-    console.log('asd', localStorage.getItem(localStorage.id))
+    console.log('id', id)
+    console.log('ttt', localStorage.getItem(localStorage[id]))
+    // console.log('asd', localStorage.getItem(localStorage.id))
 
     var one = document.createElement("div");
     one.className = "col-lg-2";
