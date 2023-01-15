@@ -47,8 +47,12 @@ chrome.storage.sync.get().then((result) => {
         console.log(3)
 
         console.log('result', result)
-        for (const id in result) {
-            console.log(result[id])
+
+        for (var id in localStorage) {
+
+
+            // for (const id in result) {
+            console.log(localStorage[id])
 
             var one = document.createElement("div");
             one.className = "col-lg-2";
@@ -60,7 +64,7 @@ chrome.storage.sync.get().then((result) => {
             var three = document.createElement("iframe");
             three.width = "225";
             three.height = "400";
-            three.src = `https://www.youtube.com/embed/${result[id]}`;
+            three.src = `https://www.youtube.com/embed/${localStorage[id]}`;
             three.style.borderRadius = "10px";
             three.frame
             three.allowFullscreen = "allowfullscreen";
