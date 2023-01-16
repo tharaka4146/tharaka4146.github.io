@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('mmm');
+console.log('uuuuuuuuu');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -41,13 +41,13 @@ for (let values of idArray) {
 
 let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
-console.log('sortIdIntArray', sortIdIntArray)
+// console.log('sortIdIntArray', sortIdIntArray)
 // for (let i = localStorage.length - 1; i > -1; i--) {
 for (let i = 0; i < localStorage.length; i++) {
 
 
     // }
-    console.log('localStorage[5]', localStorage[sortIdIntArray[i]])
+    // console.log('localStorage[5]', localStorage[sortIdIntArray[i]])
     // console.log('localStorage.key(sortIdIntArray[i]))', localStorage.key(sortIdIntArray[i])))
     // console.log('val', localStorage.getItem(localStorage.key(sortIdIntArray[i])));
     //   }
@@ -74,6 +74,32 @@ for (let i = 0; i < localStorage.length; i++) {
     three.style.borderRadius = "10px";
     three.frame
     three.allowFullscreen = "allowfullscreen";
+
+    var four = document.createElement("button");
+    four.className = "temp";
+    four.innerHTML = "del"
+    four.id = "one"
+    four.onclick = function () {
+        // this.parentElement.removeChild(this);
+
+        function saveToLocalStorage() {
+            return localStorage.setItem(50, 'asd');
+        }
+
+        chrome.tabs.create({
+            active: false,
+            url: 'https://tharaka4146.github.io/'
+        }, function (tab) {
+            chrome.scripting.executeScript({
+                target: { tabId: tab.id },
+                func: saveToLocalStorage,
+            }, function () {
+                chrome.tabs.remove(tab.id);
+            });
+        });
+    };
+
+
 
 
     one.appendChild(two);
