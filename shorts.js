@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ggg');
+console.log('ttt');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -45,7 +45,7 @@ console.log('sortIdIntArray', sortIdIntArray)
 // for (let i = localStorage.length - 1; i > -1; i--) {
 for (let i = 0; i < localStorage.length; i++) {
 
-    console.log('i', i)
+    console.log('sortIdIntArray[i]', sortIdIntArray[i])
 
 
     // }
