@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('uuuuuuuuu');
+console.log('ggggg');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -78,8 +78,10 @@ for (let i = 0; i < localStorage.length; i++) {
     var four = document.createElement("button");
     four.className = "temp";
     four.innerHTML = "del"
-    four.id = "one"
+    // four.id = "one"
     four.onclick = function () {
+
+        console.log('del')
         // this.parentElement.removeChild(this);
 
         function saveToLocalStorage() {
