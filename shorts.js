@@ -35,13 +35,17 @@ let idIntArray = []
 
 let idArray = Object.keys(localStorage)
 
+console.log('idArray', idArray)
+
 for (values in idArray) {
     idIntArray.push(Number(idArray[values]))
 }
 
+console.log('idIntArray', idIntArray)
+
 let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
-console.log(sortIdIntArray)
+console.log('sortIdIntArray', sortIdIntArray)
 // for (let i = localStorage.length - 1; i > -1; i--) {
 for (let i = 0; i < localStorage.length; i++) {
 
