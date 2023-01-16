@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ffff');
+console.log('mmmm');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -38,9 +38,10 @@ let idArray = Object.keys(localStorage)
 console.log('idArray', idArray)
 
 for (values in idArray) {
-    console.log('idArray[values]', idArray[values])
-    console.log('Number(idArray[values])', Number(idArray[values]))
-    idIntArray.push(Number(idArray[values]))
+    console.log('values', values)
+    // console.log('idArray[values]', idArray[values])
+    // console.log('Number(idArray[values])', Number(idArray[values]))
+    // idIntArray.push(Number(idArray[values]))
 }
 
 console.log('idIntArray', idIntArray)
