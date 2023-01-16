@@ -103,6 +103,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
     one.appendChild(two);
+    one.appendChild(four);
     two.appendChild(three);
 
     document.getElementById("tit").appendChild(one);
