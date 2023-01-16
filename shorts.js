@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('kkk');
+console.log('mmm');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -70,7 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
     var three = document.createElement("iframe");
     three.width = "225";
     three.height = "400";
-    three.src = `https://www.youtube.com/embed/${localStorage.getItem(localStorage.key(sortIdIntArray[i]))}`;
+    three.src = `https://www.youtube.com/embed/${localStorage[sortIdIntArray[i]]}`;
     three.style.borderRadius = "10px";
     three.frame
     three.allowFullscreen = "allowfullscreen";
