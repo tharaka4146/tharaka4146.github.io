@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('rrr');
+console.log('ggg');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -37,15 +37,15 @@ let idArray = Object.keys(localStorage)
 
 console.log('idArray', idArray)
 
-for (let j = 0; j < idArray.length; j++) {
-    console.log('asd')
-}
+// for (let j = 0; j < idArray.length; j++) {
+//     console.log('asd')
+//     idIntArray.push(Number(idArray[values]))
+// }
 
-for (values in idArray) {
+for (let values of idArray) {
     console.log('values', values)
-    // console.log('idArray[values]', idArray[values])
-    // console.log('Number(idArray[values])', Number(idArray[values]))
-    // idIntArray.push(Number(idArray[values]))
+    console.log('idArray[values]', idArray[values])
+    console.log('Number(idArray[values])', Number(idArray[values]))
 }
 
 console.log('idIntArray', idIntArray)
