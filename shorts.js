@@ -44,6 +44,8 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 // for (let i = localStorage.length - 1; i > -1; i--) {
 for (let i = 0; i < localStorage.length; i++) {
 
+    console.log(sortIdIntArray)
+
     // }
     console.log(localStorage.getItem(sortIdIntArray.key(i)));
     //   }
