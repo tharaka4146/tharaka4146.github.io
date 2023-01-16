@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('jjj');
+console.log('kkk');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -47,7 +47,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
     // }
-    console.log('localStorage[5]', localStorage[5])
+    console.log('localStorage[5]', localStorage[sortIdIntArray[i]])
     // console.log('localStorage.key(sortIdIntArray[i]))', localStorage.key(sortIdIntArray[i])))
     // console.log('val', localStorage.getItem(localStorage.key(sortIdIntArray[i])));
     //   }
