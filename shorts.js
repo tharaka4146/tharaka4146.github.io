@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('hhhhhhhh');
+console.log('hhh');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -75,24 +75,8 @@ for (let i = 0; i < localStorage.length; i++) {
     three.frame
     three.allowFullscreen = "allowfullscreen";
 
-    var four = document.createElement("button");
-    four.className = "temp";
-    four.innerHTML = "del"
-    // four.id = "one"
-    four.onclick = function () {
-
-        console.log('xcv')
-
-        let idsObj = { 50: "sdf" }
-        chrome.runtime.sendMessage(idsObj, function (r) { console.log('asd', r) });
-
-    };
-
-
-
 
     one.appendChild(two);
-    one.appendChild(four);
     two.appendChild(three);
 
     document.getElementById("tit").appendChild(one);
