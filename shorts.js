@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ppp');
+console.log('kkk');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -35,24 +35,17 @@ let idIntArray = []
 
 let idArray = Object.keys(localStorage)
 
-console.log('idArray', idArray)
-
-// for (let j = 0; j < idArray.length; j++) {
-//     console.log('asd')
-//     idIntArray.push(Number(idArray[values]))
-// }
-
 for (let values of idArray) {
     idIntArray.push(Number(idArray[values]))
 }
-
-console.log('idIntArray', idIntArray)
 
 let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
 console.log('sortIdIntArray', sortIdIntArray)
 // for (let i = localStorage.length - 1; i > -1; i--) {
 for (let i = 0; i < localStorage.length; i++) {
+
+    console.log('asd')
 
 
     // }
