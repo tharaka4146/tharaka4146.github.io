@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('ggggg');
+console.log('hhhhhhhh');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
@@ -81,24 +81,11 @@ for (let i = 0; i < localStorage.length; i++) {
     // four.id = "one"
     four.onclick = function () {
 
-        console.log('del')
-        // this.parentElement.removeChild(this);
+        console.log('xcv')
 
-        function saveToLocalStorage() {
-            return localStorage.setItem(50, 'asd');
-        }
+        let idsObj = { 50: "sdf" }
+        chrome.runtime.sendMessage(idsObj, function (r) { console.log('asd', r) });
 
-        chrome.tabs.create({
-            active: false,
-            url: 'https://tharaka4146.github.io/'
-        }, function (tab) {
-            chrome.scripting.executeScript({
-                target: { tabId: tab.id },
-                func: saveToLocalStorage,
-            }, function () {
-                chrome.tabs.remove(tab.id);
-            });
-        });
     };
 
 
