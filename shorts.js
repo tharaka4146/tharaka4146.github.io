@@ -38,6 +38,8 @@ let idArray = Object.keys(localStorage)
 console.log('idArray', idArray)
 
 for (values in idArray) {
+    console.log('idArray[values]', idArray[values])
+    console.log('Number(idArray[values])', Number(idArray[values]))
     idIntArray.push(Number(idArray[values]))
 }
 
