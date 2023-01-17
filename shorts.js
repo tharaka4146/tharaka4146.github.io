@@ -36,7 +36,7 @@ let idIntArray = []
 let idArray = Object.keys(localStorage)
 
 for (let values of idArray) {
-    idIntArray.push(Number(idArray[values]))
+    idIntArray.push(Number(values))
 }
 
 let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
