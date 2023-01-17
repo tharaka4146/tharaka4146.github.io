@@ -26,7 +26,7 @@ console.log(1)
 // keys = Object.keys(localStorage),
 
 
-console.log('hhh');
+console.log('qqq');
 
 
 // for (var i = 0, len = localStorage.length; i < len; ++i) {
