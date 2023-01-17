@@ -69,7 +69,8 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
 for (let i = 0; i < localStorage.length; i++) {
 
-    if (`${localStorage[sortIdIntArray[i]]}`) {
+    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
+
         // console.log('localStorage', localStorage)
 
         // for (let values in localStorage) {
