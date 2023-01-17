@@ -121,7 +121,7 @@ for (let i = 0; i < localStorage.length; i++) {
     iconSvg.setAttribute('height', '100px');
     iconSvg.setAttribute('viewBox', '0 0 50 115');
     iconSvg.setAttribute('fill', 'none');
-    iconSvg.style.left = "8%"
+    iconSvg.style.left = "68px"
     iconSvg.style.top = "155px"
     iconSvg.style.position = "relative"
 
@@ -175,7 +175,8 @@ for (let i = 0; i < localStorage.length; i++) {
     newIframe2.style.marginLeft = "auto";
     newIframe2.style.marginBottom = "auto";
     newIframe2.style.marginRight = "auto";
-    newIframe2.style.width = "50%";
+    // newIframe2.style.width = "50%";
+    // newIframe2.style.width = "50%";
     newIframe2.style.pointerEvents = "none";
     // newIframe2.style.top = "253px";
     // iconPath2.setAttribute('margin-left', '25%');
