@@ -21,7 +21,6 @@
         </div>
 </div> */}
 
-console.log(1)
 
 // keys = Object.keys(localStorage),
 
@@ -130,7 +129,6 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
         // iconSvg.setAttribute('stroke', '#f1f1f1');
-        console.log('asd')
         // iconSvg.classList.add(`post-icon${currentId}`);
 
         iconPath.setAttribute('d', 'M83.99 10.81C90.08 21.24 86.62 34.66 76.26 40.79L69.05 45.06L74.17 47.38C81.58 50.74 86.52 57.99 86.96 66.17C87.40 74.34 83.27 82.09 76.26 86.24L32.76 111.97C22.41 118.10 9.08 114.61 3.00 104.18C-3.08 93.75 .37 80.33 10.73 74.20L17.94 69.93L12.82 67.61C5.41 64.25 .47 57.00 .03 48.82C-0.40 40.65 3.72 32.90 10.73 28.75L54.23 3.02C64.58 -3.10 77.91 .38 83.99 10.81Z');
