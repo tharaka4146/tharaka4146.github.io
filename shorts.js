@@ -68,29 +68,32 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
 for (let i = 0; i < localStorage.length; i++) {
 
-    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
-
-        console.log('5', `${localStorage[sortIdIntArray[i]]}`)
-        function validVideoId(id) {
-            var img = new Image();
-            img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
-            img.onload = function () {
-                checkThumbnail(this.width);
-            }
+    function validVideoId(id) {
+        var img = new Image();
+        img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
+        img.onload = function () {
+            return checkThumbnail(this.width);
         }
+    }
 
-        function checkThumbnail(width) {
-            console.log('width======', localStorage[sortIdIntArray[i]], '==============', width)
-            //HACK a mq thumbnail has width of 320.
-            //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
-            // if (width === 120) {
-            //     console.log(localStorage[sortIdIntArray[i]], "Error: Invalid video id");
-            // } else {
-            //     console.log(localStorage[sortIdIntArray[i]], 'okkkk')
-            // }
+    function checkThumbnail(width) {
+        console.log('width======', localStorage[sortIdIntArray[i]], '==============', width)
+        //HACK a mq thumbnail has width of 320.
+        //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
+        if (width === 120) {
+            console.log(localStorage[sortIdIntArray[i]], "Error: Invalid video id");
+            return false
+        } else {
+            console.log(localStorage[sortIdIntArray[i]], 'okkkk')
+            return true
         }
+    }
 
-        validVideoId()
+    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]])) {
+
+
+
+
         // console.log('localStorage', localStorage)
 
         // for (let values in localStorage) {
