@@ -70,11 +70,23 @@ for (let i = 0; i < localStorage.length; i++) {
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
-        console.log('`${localStorage[sortIdIntArray[i]]}`========= 222', `${localStorage[sortIdIntArray[i]]}`)
+        console.log('`${localStorage[sortIdIntArray[i]]}`========= 333', `${localStorage[sortIdIntArray[i]]}`)
 
-        $.getJSON('https://www.youtube.com/shorts/4Xn7e8T4azw', function (data, status, xhr) {
-            alert(data.data.title);
-        }).error(function () { alert("error"); });
+        function validVideoId(id) {
+            var img = new Image();
+            img.src = "http://img.youtube.com/vi/4Xn7e8T4azw/mqdefault.jpg";
+            img.onload = function () {
+                checkThumbnail(this.width);
+            }
+        }
+
+        function checkThumbnail(width) {
+            //HACK a mq thumbnail has width of 320.
+            //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
+            if (width === 120) {
+                alert("Error: Invalid video id");
+            }
+        }
 
         // console.log('localStorage', localStorage)
 
