@@ -91,14 +91,14 @@ for (let i = 0; i < localStorage.length; i++) {
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
             if (this.width === 120) {
-                return false
+                // return false
+                myResolve(true); // when successful
             } else {
                 console.log('---------')
-                return true
+                myReject(false);  // when error
+                // return true
             }
         }
-        myResolve(); // when successful
-        myReject();  // when error
     });
 
     // "Consuming Code" (Must wait for a fulfilled Promise)
