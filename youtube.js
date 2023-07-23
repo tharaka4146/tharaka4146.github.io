@@ -1,4 +1,5 @@
 function labnolIframe(div) {
+    console.log('div===============', div)
     var iframe = document.createElement('iframe');
     iframe.setAttribute('src', 'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0');
     iframe.setAttribute('frameborder', '0');
