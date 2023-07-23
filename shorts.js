@@ -70,33 +70,26 @@ for (let i = 0; i < localStorage.length; i++) {
 
     let isAvailable
 
-
     function validVideoId(id) {
         var img = new Image();
-        img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.src = "http://img.youtube.com/vi/" + id + "/mqdefault.jpg";
         img.onload = function () {
-            checkThumbnail(this.width);
+            checkThumbnail(this.width, isAvailable);
         }
     }
 
-    function checkThumbnail(width) {
-        //HACK a mq thumbnail has width of 320.
-        //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
+    function checkThumbnail(width, isAvailable) {
         if (width === 120) {
-            isAvailable = false
-
+            return isAvailable = false
         } else {
-            isAvailable = true
-
+            return isAvailable = true
         }
     }
 
-    validVideoId(localStorage[sortIdIntArray[i]])
+    validVideoId(localStorage[sortIdIntArray[i]], isAvailable)
 
-    console.log('isAvailable====== 2', isAvailable)
-
-    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && isAvailable === true) {
+    console.log('isAvailable======== 3', isAvailable)
+    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
         // console.log('localStorage', localStorage)
 
