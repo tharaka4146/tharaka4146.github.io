@@ -71,12 +71,10 @@ for (let i = 0; i < localStorage.length; i++) {
 
     var img = new Image();
     img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
-    return img.onload = function () {
+    img.onload = function () {
         if (this.width === 120) {
             // return false
         } else {
-
-            console.log('okkkkkkkkkkkkkkkkk', `${localStorage[sortIdIntArray[i]]}`)
 
             if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
