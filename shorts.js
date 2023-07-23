@@ -90,7 +90,7 @@ for (let i = 0; i < localStorage.length; i++) {
         }
     }
 
-    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]])) {
+    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]]) === true) {
 
 
 
