@@ -70,7 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
-        console.log('`${localStorage[sortIdIntArray[i]]}`========= 111', `${localStorage[sortIdIntArray[i]]}`)
+        console.log('`${localStorage[sortIdIntArray[i]]}`========= 222', `${localStorage[sortIdIntArray[i]]}`)
 
         $.getJSON('https://www.youtube.com/shorts/4Xn7e8T4azw', function (data, status, xhr) {
             alert(data.data.title);
