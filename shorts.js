@@ -68,7 +68,7 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 
 for (let i = 0; i < localStorage.length; i++) {
 
-    let isAvailable = true
+    let isAvailable
 
     var img = new Image();
     img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
@@ -79,6 +79,8 @@ for (let i = 0; i < localStorage.length; i++) {
             isAvailable = true
         }
     }
+
+    console.log('isAvailable======', isAvailable)
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && isAvailable === true) {
 
