@@ -89,8 +89,8 @@ for (let i = 0; i < localStorage.length; i++) {
             return true
         }
     }
-
-    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]]) === true) {
+    console.log('validVideoId(localStorage[sortIdIntArray[i]])', validVideoId(localStorage[sortIdIntArray[i]]))
+    if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]])) {
 
 
 
