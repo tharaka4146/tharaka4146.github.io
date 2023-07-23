@@ -85,24 +85,21 @@ for (let i = 0; i < localStorage.length; i++) {
     // }).then(() => { console.log('isAvailableaa======== 4', isAvailable) })
 
 
-    let myPromise = new Promise(function (myResolve, myReject) {
+    new Promise(function (myResolve, myReject) {
         // "Producing Code" (May take some time)
         var img = new Image();
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
             if (this.width === 120) {
                 // return false
-                myResolve(true); // when successful
+                myReject(false);  // when error
             } else {
                 console.log('---------')
-                myReject(false);  // when error
+                myResolve(true); // when successful
                 // return true
             }
         }
-    });
-
-    // "Consuming Code" (Must wait for a fulfilled Promise)
-    myPromise.then(
+    }).then(
         function (value) { /* code if successful */
             console.log('value======== 5', value)
 
@@ -232,7 +229,8 @@ for (let i = 0; i < localStorage.length; i++) {
             }
         },
         function (error) { /* code if some error */ }
-    );
+    )
+
 
 
 
