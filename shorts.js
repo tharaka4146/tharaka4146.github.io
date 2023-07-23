@@ -76,10 +76,10 @@ for (let i = 0; i < localStorage.length; i++) {
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
             if (this.width === 120) {
-                return isAvailable = false
+                isAvailable = false
             } else {
                 console.log('----------------------------------------')
-                return isAvailable = true
+                isAvailable = true
             }
         }
     }).then(() => { console.log('isAvailableaa======== 4', isAvailable) })
