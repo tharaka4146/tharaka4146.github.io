@@ -71,7 +71,22 @@ for (let i = 0; i < localStorage.length; i++) {
 
     let isAvailable
 
-    new Promise(() => {
+    // new Promise(() => {
+    //     var img = new Image();
+    //     img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
+    //     img.onload = function () {
+    //         if (this.width === 120) {
+    //             isAvailable = false
+    //         } else {
+    //             console.log('----------------------------------------')
+    //             isAvailable = true
+    //         }
+    //     }
+    // }).then(() => { console.log('isAvailableaa======== 4', isAvailable) })
+
+
+    let myPromise = new Promise(function (myResolve, myReject) {
+        // "Producing Code" (May take some time)
         var img = new Image();
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
@@ -82,9 +97,17 @@ for (let i = 0; i < localStorage.length; i++) {
                 isAvailable = true
             }
         }
-    }).then(() => { console.log('isAvailableaa======== 4', isAvailable) })
+        myResolve(); // when successful
+        myReject();  // when error
+    });
 
-
+    // "Consuming Code" (Must wait for a fulfilled Promise)
+    myPromise.then(
+        function (value) { /* code if successful */
+            console.log('isAvailableaa======== 4', isAvailable)
+        },
+        function (error) { /* code if some error */ }
+    );
 
 
 
