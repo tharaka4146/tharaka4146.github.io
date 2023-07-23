@@ -71,9 +71,9 @@ for (let i = 0; i < localStorage.length; i++) {
     function validVideoId(id) {
         var img = new Image();
         img.src = "http://img.youtube.com/vi/" + id + "/mqdefault.jpg";
-        return img.onload = function () {
+        img.onload = function () {
             if (this.width !== 120) {
-                if (`${localStorage[sortIdIntArray[i]]}` !== "undefined" && validVideoId(localStorage[sortIdIntArray[i]])) {
+                if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
                     // console.log('localStorage', localStorage)
 
@@ -200,6 +200,8 @@ for (let i = 0; i < localStorage.length; i++) {
             }
         }
     }
+
+    validVideoId(localStorage[sortIdIntArray[i]])
 
 
 }
