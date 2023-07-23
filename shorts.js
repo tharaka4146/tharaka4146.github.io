@@ -96,19 +96,19 @@ for (let i = 0; i < localStorage.length; i++) {
             } else {
                 console.log('---------')
                 myResolve(true); // when successful
-                temp = 'asd'
+                temp = true
                 // return true
             }
         }
     }).then(
         function (value) { /* code if successful */
             // console.log('value======== 5', value)
-            console.log('temp', temp)
         },
         function (error) { /* code if some error */ }
     )
 
 
+    console.log('temp', temp)
 
 
 
