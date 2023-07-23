@@ -70,8 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
-        console.log('`${localStorage[sortIdIntArray[i]]}`========= 333', `${localStorage[sortIdIntArray[i]]}`)
-
+        console.log('4', `${localStorage[sortIdIntArray[i]]}`)
         function validVideoId(id) {
             var img = new Image();
             img.src = "http://img.youtube.com/vi/4Xn7e8T4azw/mqdefault.jpg";
@@ -84,10 +83,13 @@ for (let i = 0; i < localStorage.length; i++) {
             //HACK a mq thumbnail has width of 320.
             //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
             if (width === 120) {
-                alert("Error: Invalid video id");
+                console.log("Error: Invalid video id");
+            } else {
+                console.log('okkkk')
             }
         }
 
+        validVideoId()
         // console.log('localStorage', localStorage)
 
         // for (let values in localStorage) {
