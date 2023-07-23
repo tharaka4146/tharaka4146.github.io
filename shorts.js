@@ -60,6 +60,7 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 //     three.allowFullscreen = "allowfullscreen";
 
 
+
 //     one.appendChild(two);
 //     two.appendChild(three);
 
@@ -70,18 +71,23 @@ for (let i = 0; i < localStorage.length; i++) {
 
     let isAvailable
 
-    var img = new Image();
-    img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
-    img.onload = function () {
-        if (this.width === 120) {
-            return isAvailable = false
-        } else {
-            console.log('----------------------------------------')
-            return isAvailable = true
+    new Promise(() => {
+        var img = new Image();
+        img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
+        img.onload = function () {
+            if (this.width === 120) {
+                return isAvailable = false
+            } else {
+                console.log('----------------------------------------')
+                return isAvailable = true
+            }
         }
-    }
+    }).then(() => { console.log('isAvailableaa======== 4', isAvailable) })
 
-    console.log('isAvailable======== 4', isAvailable)
+
+
+
+
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
