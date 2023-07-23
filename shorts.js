@@ -70,25 +70,27 @@ for (let i = 0; i < localStorage.length; i++) {
 
     let isAvailable
 
-    function validVideoId(id) {
+    function validVideoId() {
         var img = new Image();
-        img.src = "http://img.youtube.com/vi/" + id + "/mqdefault.jpg";
+        img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
-            checkThumbnail(this.width, isAvailable);
+            // checkThumbnail(this.width, isAvailable);
+            if (this.width === 120) {
+                return isAvailable = false
+            } else {
+                console.log('----------------------------------------')
+                return isAvailable = true
+            }
         }
     }
 
-    function checkThumbnail(width, isAvailable) {
-        if (width === 120) {
-            return isAvailable = false
-        } else {
-            return isAvailable = true
-        }
-    }
+    // function checkThumbnail(width, isAvailable) {
+    // }
 
-    validVideoId(localStorage[sortIdIntArray[i]], isAvailable)
+    // validVideoId(localStorage[sortIdIntArray[i]], isAvailable)
 
     console.log('isAvailable======== 3', isAvailable)
+
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
         // console.log('localStorage', localStorage)
