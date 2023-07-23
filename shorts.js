@@ -73,7 +73,7 @@ for (let i = 0; i < localStorage.length; i++) {
         console.log('4', `${localStorage[sortIdIntArray[i]]}`)
         function validVideoId(id) {
             var img = new Image();
-            img.src = "http://img.youtube.com/vi/4Xn7e8T4azw/mqdefault.jpg";
+            img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
             img.onload = function () {
                 checkThumbnail(this.width);
             }
