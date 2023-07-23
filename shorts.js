@@ -71,7 +71,13 @@ for (let i = 0; i < localStorage.length; i++) {
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
         console.log('`${localStorage[sortIdIntArray[i]]}`========= 111', `${localStorage[sortIdIntArray[i]]}`)
-        console.log('`${localStorage[sortIdIntArray[i]]}`========= 222', localStorage[sortIdIntArray[i]])
+
+        //var videoID = 'kn8yzJITdvI';//not working 
+        var videoID = '4Xn7e8T4azw';//working 
+
+        $.getJSON('https://www.youtube.com/shorts/4Xn7e8T4azw' + videoID, function (data, status, xhr) {
+            alert(data.data.title);
+        }).error(function () { alert("error"); });
 
         // console.log('localStorage', localStorage)
 
