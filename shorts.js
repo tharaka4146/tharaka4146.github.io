@@ -72,7 +72,8 @@ for (let i = 0; i < localStorage.length; i++) {
         var img = new Image();
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         img.onload = function () {
-            return checkThumbnail(this.width);
+            // return checkThumbnail(this.width);
+            console.log('checkThumbnail(this.width)', checkThumbnail(this.width))
         }
     }
 
