@@ -69,12 +69,16 @@ let sortIdIntArray = Object.values(idIntArray).sort((a, b) => b - a)
 for (let i = 0; i < localStorage.length; i++) {
 
     function validVideoId() {
+
         var img = new Image();
         img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
         return img.onload = function () {
             if (this.width === 120) {
-                return false
+                // return false
             } else {
+
+                console.log('okkkkkkkkkkkkkkkkk', `${localStorage[sortIdIntArray[i]]}`)
+
                 if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
                     // console.log('localStorage', localStorage)
