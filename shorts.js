@@ -80,6 +80,7 @@ for (let i = 0; i < localStorage.length; i++) {
         }
 
         function checkThumbnail(width) {
+            console.log('width======', width)
             //HACK a mq thumbnail has width of 320.
             //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
             if (width === 120) {
