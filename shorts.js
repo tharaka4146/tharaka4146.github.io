@@ -70,7 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
     if (`${localStorage[sortIdIntArray[i]]}` !== "undefined") {
 
-        console.log('4', `${localStorage[sortIdIntArray[i]]}`)
+        console.log('5', `${localStorage[sortIdIntArray[i]]}`)
         function validVideoId(id) {
             var img = new Image();
             img.src = "http://img.youtube.com/vi/" + localStorage[sortIdIntArray[i]] + "/mqdefault.jpg";
@@ -80,14 +80,14 @@ for (let i = 0; i < localStorage.length; i++) {
         }
 
         function checkThumbnail(width) {
-            console.log('width======', width)
+            console.log('width======', localStorage[sortIdIntArray[i]], '==============', width)
             //HACK a mq thumbnail has width of 320.
             //if the video does not exist(therefore thumbnail don't exist), a default thumbnail of 120 width is returned.
-            if (width === 120) {
-                console.log("Error: Invalid video id");
-            } else {
-                console.log('okkkk')
-            }
+            // if (width === 120) {
+            //     console.log(localStorage[sortIdIntArray[i]], "Error: Invalid video id");
+            // } else {
+            //     console.log(localStorage[sortIdIntArray[i]], 'okkkk')
+            // }
         }
 
         validVideoId()
